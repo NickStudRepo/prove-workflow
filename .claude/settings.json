@@ -1,0 +1,19 @@
+{
+  "skills": {
+    "grill-me": {
+      "path": ".claude/skills/grill-me/SKILL.md"
+    },
+    "write-a-prd": {
+      "path": ".claude/skills/write-a-prd/SKILL.md"
+    },
+    "prd-to-issues": {
+      "path": ".claude/skills/prd-to-issues/SKILL.md"
+    },
+    "tdd": {
+      "path": ".claude/skills/tdd/SKILL.md"
+    },
+    "improve-codebase-architecture": {
+      "path": ".claude/skills/improve-codebase-architecture/SKILL.md"
+    }
+  }
+}
