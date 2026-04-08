@@ -9,12 +9,43 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #1a1a2e;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   font-family: 'Segoe UI', system-ui, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+body::before {
+  width: 400px;
+  height: 400px;
+  background: rgba(233, 69, 96, 0.35);
+  top: -80px;
+  left: -100px;
+  filter: blur(100px);
+}
+
+body::after {
+  width: 350px;
+  height: 350px;
+  background: rgba(12, 202, 74, 0.25);
+  bottom: -60px;
+  right: -80px;
+  filter: blur(100px);
 }
 
 .calculator {
-  background: #16213e;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   padding: 24px;
   width: 320px;
@@ -22,7 +53,10 @@ body {
 }
 
 .display {
-  background: #0f3460;
+  background: rgba(15, 52, 96, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 16px 20px;
   margin-bottom: 20px;
@@ -64,14 +98,14 @@ button {
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  background: #1a1a3e;
+  background: rgba(255, 255, 255, 0.05);
   color: #e0e0e0;
   transition: background 0.15s, transform 0.1s;
   font-family: inherit;
 }
 
 button:hover {
-  background: #2a2a5e;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 button:active {
