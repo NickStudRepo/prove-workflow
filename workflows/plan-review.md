@@ -1,22 +1,8 @@
-# Prove Workflow - AI-Driven Development Workflow PoC
-
-This project tests different AI-driven development workflows. Each workflow is defined in `workflows/` and can be activated below.
-
-Available workflows:
-- `workflows/pipeline.md` — 5-skill sequential pipeline (/grill-me -> /write-a-prd -> /prd-to-issues -> /tdd -> /improve-codebase-architecture)
-- `workflows/plan-review.md` — Multi-agent plan-review with handoff and feedback loop
-
-## Switching Workflows
-
-To switch: replace the **Active Workflow** section below with the contents of the desired workflow file from `workflows/`.
-
----
-
-## Active Workflow: Multi-Agent Plan-Review
+# Multi-Agent Plan-Review Workflow
 
 A plan-first, multi-agent workflow. One agent plans and reviews, another implements. A feedback loop between them ensures quality.
 
-### The Pipeline
+## The Pipeline
 
 ```
 Describe -> Understand -> Research (optional) -> Plan (.md) -> Self-Review -> Handoff -> Review -> Feedback Loop -> PR & Merge
@@ -32,14 +18,14 @@ Describe -> Understand -> Research (optional) -> Plan (.md) -> Self-Review -> Ha
 8. **Feedback Loop** - Iterate between implementation and review until both sides are satisfied.
 9. **PR & Merge** - Push, open a PR with a short description, merge to `main`.
 
-### Branch Strategy
+## Branch Strategy
 
 - Branch off `main` once the plan `.md` is finalized
 - Branch naming: `feature/<short-slug>`
 - All implementation happens on the feature branch
 - Merge via PR back to `main`
 
-### Conventions
+## Conventions
 
 - Plan files live in `plans/` and stay in the repo
 - Plan files are detailed enough for an agent with zero project context to implement from
